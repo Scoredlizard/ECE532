@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# 
+# Start of session at: Wed Jan 17 14:18:59 2024
+# Process ID: 7108
+# Current directory: C:/Users/sebas/Desktop/School/ECE532/T5/T5.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: C:/Users/sebas/Desktop/School/ECE532/T5/T5.sdk/webtalk/webtalk.log
+# Journal file: C:/Users/sebas/Desktop/School/ECE532/T5/T5.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

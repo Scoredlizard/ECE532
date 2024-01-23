@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="Demo_HW_xbar_0_synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1705978859">
+<GenRun Id="Demo_HW_xbar_0_synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1706038142">
   <File Type="PA-TCL" Name="Demo_HW_xbar_0.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="Demo_HW_xbar_0_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Demo_HW_xbar_0_reports.tcl"/>

@@ -12,96 +12,98 @@ source Demo_HW_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
-add_files: Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 483.961 ; gain = 135.938
+add_files: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 482.703 ; gain = 134.582
 Command: synth_design -top Demo_HW_wrapper -part xc7a100tcsg324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 12568 
+INFO: Helper process launched with PID 7160 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 585.145 ; gain = 99.438
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 584.828 ; gain = 100.422
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Demo_HW_wrapper' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/hdl/Demo_HW_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'Demo_HW' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:13]
-INFO: [Synth 8-6157] synthesizing module 'Demo_HW_axi_ethernetlite_0_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_axi_ethernetlite_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_axi_ethernetlite_0_0' (1#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_axi_ethernetlite_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'axi_ethernetlite_0' of module 'Demo_HW_axi_ethernetlite_0_0' requires 34 connections, but only 33 given [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:475]
-INFO: [Synth 8-6157] synthesizing module 'Demo_HW_axi_gpio_5_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_axi_gpio_5_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_axi_gpio_5_0' (2#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_axi_gpio_5_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'Demo_HW_axi_gpio_2_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_axi_gpio_2_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_axi_gpio_2_0' (3#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_axi_gpio_2_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'Demo_HW_axi_gpio_3_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_axi_gpio_3_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_axi_gpio_3_0' (4#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_axi_gpio_3_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'Demo_HW_axi_gpio_4_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_axi_gpio_4_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_axi_gpio_4_0' (5#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_axi_gpio_4_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'Demo_HW_axi_gpio_0_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_axi_gpio_0_0' (6#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'Demo_HW_axi_gpio_1_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_axi_gpio_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_axi_gpio_1_0' (7#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_axi_gpio_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'Demo_HW_axi_smc_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_axi_smc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_axi_smc_0' (8#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_axi_smc_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'Demo_HW_axi_timer_0_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_axi_timer_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_axi_timer_0_0' (9#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_axi_timer_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'axi_timer_0' of module 'Demo_HW_axi_timer_0_0' requires 26 connections, but only 23 given [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:720]
-INFO: [Synth 8-6157] synthesizing module 'Demo_HW_axi_uartlite_0_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_axi_uartlite_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_axi_uartlite_0_0' (10#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_axi_uartlite_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'axi_uartlite_0' of module 'Demo_HW_axi_uartlite_0_0' requires 22 connections, but only 21 given [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:744]
-INFO: [Synth 8-6157] synthesizing module 'Demo_HW_clk_wiz_1_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_clk_wiz_1_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_clk_wiz_1_0' (11#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_clk_wiz_1_0_stub.v:5]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:773]
-INFO: [Synth 8-6157] synthesizing module 'Demo_HW_ila_0_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_ila_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_ila_0_0' (12#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_ila_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'Demo_HW_mdm_1_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_mdm_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_mdm_1_0' (13#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_mdm_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'Demo_HW_microblaze_0_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_microblaze_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_microblaze_0_0' (14#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_microblaze_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'microblaze_0' of module 'Demo_HW_microblaze_0_0' requires 126 connections, but only 108 given [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:807]
-INFO: [Synth 8-6157] synthesizing module 'Demo_HW_microblaze_0_axi_intc_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_microblaze_0_axi_intc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_microblaze_0_axi_intc_0' (15#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_microblaze_0_axi_intc_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'Demo_HW_microblaze_0_axi_periph_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:1276]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1695SUX' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:2768]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1695SUX' (16#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:2768]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_8UZSII' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:2900]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_8UZSII' (17#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:2900]
-INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_L7PODA' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:3032]
-INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_L7PODA' (18#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:3032]
-INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_1KJZ8PP' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:3178]
-INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1KJZ8PP' (19#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:3178]
-INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_1T9WPEE' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:3310]
-INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_1T9WPEE' (20#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:3310]
-INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_U7T591' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:3442]
-INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_U7T591' (21#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:3442]
-INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_HM615D' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:3574]
-INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_HM615D' (22#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:3574]
-INFO: [Synth 8-6157] synthesizing module 'm07_couplers_imp_1FAI1HU' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:3706]
-INFO: [Synth 8-6155] done synthesizing module 'm07_couplers_imp_1FAI1HU' (23#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:3706]
-INFO: [Synth 8-6157] synthesizing module 'm08_couplers_imp_Z238W7' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:3838]
-INFO: [Synth 8-6155] done synthesizing module 'm08_couplers_imp_Z238W7' (24#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:3838]
-INFO: [Synth 8-6157] synthesizing module 'm09_couplers_imp_1XD5DVO' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:3970]
-INFO: [Synth 8-6155] done synthesizing module 'm09_couplers_imp_1XD5DVO' (25#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:3970]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_8QA1FP' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:4336]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_8QA1FP' (26#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:4336]
-INFO: [Synth 8-6157] synthesizing module 'Demo_HW_xbar_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_xbar_0' (27#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_xbar_0_stub.v:6]
-WARNING: [Synth 8-689] width (9) of port connection 'm_axi_arprot' does not match port width (30) of module 'Demo_HW_xbar_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:2729]
-WARNING: [Synth 8-689] width (9) of port connection 'm_axi_awprot' does not match port width (30) of module 'Demo_HW_xbar_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:2733]
-INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_microblaze_0_axi_periph_0' (28#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:1276]
-INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_GG9KAH' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:4102]
-INFO: [Synth 8-6157] synthesizing module 'Demo_HW_dlmb_bram_if_cntlr_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_dlmb_bram_if_cntlr_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_dlmb_bram_if_cntlr_0' (29#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_dlmb_bram_if_cntlr_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'Demo_HW_dlmb_v10_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_dlmb_v10_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_dlmb_v10_0' (30#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_dlmb_v10_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'dlmb_v10' of module 'Demo_HW_dlmb_v10_0' requires 25 connections, but only 24 given [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:4248]
-INFO: [Synth 8-6157] synthesizing module 'Demo_HW_ilmb_bram_if_cntlr_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_ilmb_bram_if_cntlr_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_ilmb_bram_if_cntlr_0' (31#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_ilmb_bram_if_cntlr_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'Demo_HW_ilmb_v10_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_ilmb_v10_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_ilmb_v10_0' (32#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_ilmb_v10_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'ilmb_v10' of module 'Demo_HW_ilmb_v10_0' requires 25 connections, but only 24 given [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:4294]
-INFO: [Synth 8-6157] synthesizing module 'Demo_HW_lmb_bram_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_lmb_bram_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_lmb_bram_0' (33#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_lmb_bram_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'lmb_bram' of module 'Demo_HW_lmb_bram_0' requires 16 connections, but only 14 given [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:4319]
-INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_GG9KAH' (34#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:4102]
+INFO: [Synth 8-6157] synthesizing module 'Demo_HW_axi_ethernetlite_0_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_axi_ethernetlite_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_axi_ethernetlite_0_0' (1#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_axi_ethernetlite_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'axi_ethernetlite_0' of module 'Demo_HW_axi_ethernetlite_0_0' requires 34 connections, but only 33 given [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:494]
+INFO: [Synth 8-6157] synthesizing module 'Demo_HW_axi_gpio_5_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_axi_gpio_5_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_axi_gpio_5_0' (2#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_axi_gpio_5_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Demo_HW_axi_gpio_2_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_axi_gpio_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_axi_gpio_2_0' (3#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_axi_gpio_2_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Demo_HW_axi_gpio_3_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_axi_gpio_3_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_axi_gpio_3_0' (4#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_axi_gpio_3_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Demo_HW_axi_gpio_4_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_axi_gpio_4_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_axi_gpio_4_0' (5#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_axi_gpio_4_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Demo_HW_axi_gpio_0_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_axi_gpio_0_0' (6#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Demo_HW_axi_gpio_1_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_axi_gpio_1_0' (7#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Demo_HW_axi_smc_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_axi_smc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_axi_smc_0' (8#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_axi_smc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Demo_HW_axi_timer_0_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_axi_timer_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_axi_timer_0_0' (9#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_axi_timer_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'axi_timer_0' of module 'Demo_HW_axi_timer_0_0' requires 26 connections, but only 23 given [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:739]
+INFO: [Synth 8-6157] synthesizing module 'Demo_HW_axi_uartlite_0_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_axi_uartlite_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_axi_uartlite_0_0' (10#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_axi_uartlite_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'axi_uartlite_0' of module 'Demo_HW_axi_uartlite_0_0' requires 22 connections, but only 21 given [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:763]
+INFO: [Synth 8-6157] synthesizing module 'Demo_HW_clk_wiz_1_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_clk_wiz_1_0' (11#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_clk_wiz_1_0_stub.v:5]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:792]
+INFO: [Synth 8-6157] synthesizing module 'Demo_HW_ila_0_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_ila_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_ila_0_0' (12#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_ila_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Demo_HW_mdm_1_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_mdm_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_mdm_1_0' (13#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_mdm_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Demo_HW_microblaze_0_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_microblaze_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_microblaze_0_0' (14#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_microblaze_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'microblaze_0' of module 'Demo_HW_microblaze_0_0' requires 145 connections, but only 127 given [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:826]
+INFO: [Synth 8-6157] synthesizing module 'Demo_HW_microblaze_0_axi_intc_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_microblaze_0_axi_intc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_microblaze_0_axi_intc_0' (15#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_microblaze_0_axi_intc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Demo_HW_microblaze_0_axi_periph_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:1335]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1695SUX' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:2969]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1695SUX' (16#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:2969]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_8UZSII' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:3101]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_8UZSII' (17#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:3101]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_L7PODA' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:3233]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_L7PODA' (18#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:3233]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_1KJZ8PP' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:3379]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1KJZ8PP' (19#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:3379]
+INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_1T9WPEE' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:3511]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_1T9WPEE' (20#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:3511]
+INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_U7T591' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:3643]
+INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_U7T591' (21#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:3643]
+INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_HM615D' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:3775]
+INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_HM615D' (22#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:3775]
+INFO: [Synth 8-6157] synthesizing module 'm07_couplers_imp_1FAI1HU' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:3907]
+INFO: [Synth 8-6155] done synthesizing module 'm07_couplers_imp_1FAI1HU' (23#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:3907]
+INFO: [Synth 8-6157] synthesizing module 'm08_couplers_imp_Z238W7' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:4039]
+INFO: [Synth 8-6155] done synthesizing module 'm08_couplers_imp_Z238W7' (24#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:4039]
+INFO: [Synth 8-6157] synthesizing module 'm09_couplers_imp_1XD5DVO' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:4171]
+INFO: [Synth 8-6155] done synthesizing module 'm09_couplers_imp_1XD5DVO' (25#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:4171]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_8QA1FP' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:4537]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_8QA1FP' (26#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:4537]
+INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_16EEWZQ' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:4683]
+INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_16EEWZQ' (27#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:4683]
+INFO: [Synth 8-6157] synthesizing module 'Demo_HW_xbar_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_xbar_0' (28#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_xbar_0_stub.v:6]
+WARNING: [Synth 8-689] width (9) of port connection 'm_axi_arprot' does not match port width (30) of module 'Demo_HW_xbar_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:2930]
+WARNING: [Synth 8-689] width (9) of port connection 'm_axi_awprot' does not match port width (30) of module 'Demo_HW_xbar_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:2934]
+INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_microblaze_0_axi_periph_0' (29#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:1335]
+INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_GG9KAH' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:4303]
+INFO: [Synth 8-6157] synthesizing module 'Demo_HW_dlmb_bram_if_cntlr_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_dlmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_dlmb_bram_if_cntlr_0' (30#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_dlmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Demo_HW_dlmb_v10_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_dlmb_v10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_dlmb_v10_0' (31#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_dlmb_v10_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'dlmb_v10' of module 'Demo_HW_dlmb_v10_0' requires 25 connections, but only 24 given [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:4449]
+INFO: [Synth 8-6157] synthesizing module 'Demo_HW_ilmb_bram_if_cntlr_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_ilmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_ilmb_bram_if_cntlr_0' (32#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_ilmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Demo_HW_ilmb_v10_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_ilmb_v10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_ilmb_v10_0' (33#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_ilmb_v10_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'ilmb_v10' of module 'Demo_HW_ilmb_v10_0' requires 25 connections, but only 24 given [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:4495]
+INFO: [Synth 8-6157] synthesizing module 'Demo_HW_lmb_bram_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_lmb_bram_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_lmb_bram_0' (34#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_lmb_bram_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'lmb_bram' of module 'Demo_HW_lmb_bram_0' requires 16 connections, but only 14 given [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:4520]
+INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_GG9KAH' (35#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:4303]
 INFO: [Synth 8-6157] synthesizing module 'Demo_HW_microblaze_0_xlconcat_0' [c:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/ip/Demo_HW_microblaze_0_xlconcat_0/synth/Demo_HW_microblaze_0_xlconcat_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_1_xlconcat' [c:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
 	Parameter IN0_WIDTH bound to: 1 - type: integer 
@@ -138,30 +140,30 @@ INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_1_xlconcat' [c:/Users/Ca
 	Parameter IN31_WIDTH bound to: 1 - type: integer 
 	Parameter dout_width bound to: 2 - type: integer 
 	Parameter NUM_PORTS bound to: 2 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_1_xlconcat' (35#1) [c:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_microblaze_0_xlconcat_0' (36#1) [c:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/ip/Demo_HW_microblaze_0_xlconcat_0/synth/Demo_HW_microblaze_0_xlconcat_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'Demo_HW_mig_7series_0_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_mig_7series_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_mig_7series_0_0' (37#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_mig_7series_0_0_stub.v:5]
-WARNING: [Synth 8-350] instance 'mig_7series_0' of module 'Demo_HW_mig_7series_0_0' requires 66 connections, but only 55 given [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:1184]
-INFO: [Synth 8-6157] synthesizing module 'Demo_HW_mii_to_rmii_0_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_mii_to_rmii_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_mii_to_rmii_0_0' (38#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_mii_to_rmii_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'Demo_HW_rst_clk_wiz_1_100M_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_rst_clk_wiz_1_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_rst_clk_wiz_1_100M_0' (39#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_rst_clk_wiz_1_100M_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'rst_clk_wiz_1_100M' of module 'Demo_HW_rst_clk_wiz_1_100M_0' requires 10 connections, but only 8 given [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:1258]
-INFO: [Synth 8-6157] synthesizing module 'Demo_HW_rst_mig_7series_0_81M_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_rst_mig_7series_0_81M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_rst_mig_7series_0_81M_0' (40#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-11188-Callum-Laptop/realtime/Demo_HW_rst_mig_7series_0_81M_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'rst_mig_7series_0_81M' of module 'Demo_HW_rst_mig_7series_0_81M_0' requires 10 connections, but only 6 given [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:1267]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axi_ethernetlite_0'. This will prevent further optimization [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:475]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'microblaze_0_axi_periph'. This will prevent further optimization [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:942]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_0'. This will prevent further optimization [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:773]
-INFO: [Synth 8-6155] done synthesizing module 'Demo_HW' (41#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_1_xlconcat' (36#1) [c:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_microblaze_0_xlconcat_0' (37#1) [c:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/ip/Demo_HW_microblaze_0_xlconcat_0/synth/Demo_HW_microblaze_0_xlconcat_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'Demo_HW_mig_7series_0_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_mig_7series_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_mig_7series_0_0' (38#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_mig_7series_0_0_stub.v:5]
+WARNING: [Synth 8-350] instance 'mig_7series_0' of module 'Demo_HW_mig_7series_0_0' requires 66 connections, but only 55 given [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:1243]
+INFO: [Synth 8-6157] synthesizing module 'Demo_HW_mii_to_rmii_0_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_mii_to_rmii_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_mii_to_rmii_0_0' (39#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_mii_to_rmii_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Demo_HW_rst_clk_wiz_1_100M_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_rst_clk_wiz_1_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_rst_clk_wiz_1_100M_0' (40#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_rst_clk_wiz_1_100M_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'rst_clk_wiz_1_100M' of module 'Demo_HW_rst_clk_wiz_1_100M_0' requires 10 connections, but only 8 given [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:1317]
+INFO: [Synth 8-6157] synthesizing module 'Demo_HW_rst_mig_7series_0_81M_0' [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_rst_mig_7series_0_81M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_rst_mig_7series_0_81M_0' (41#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/.Xil/Vivado-10624-Callum-Laptop/realtime/Demo_HW_rst_mig_7series_0_81M_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'rst_mig_7series_0_81M' of module 'Demo_HW_rst_mig_7series_0_81M_0' requires 10 connections, but only 6 given [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:1326]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axi_ethernetlite_0'. This will prevent further optimization [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:494]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'microblaze_0_axi_periph'. This will prevent further optimization [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:980]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_0'. This will prevent further optimization [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:792]
+INFO: [Synth 8-6155] done synthesizing module 'Demo_HW' (42#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/synth/Demo_HW.v:13]
 INFO: [Synth 8-6157] synthesizing module 'IOBUF' [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:23615]
 	Parameter DRIVE bound to: 12 - type: integer 
 	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
-INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (42#1) [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:23615]
-INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_wrapper' (43#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/hdl/Demo_HW_wrapper.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (43#1) [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:23615]
+INFO: [Synth 8-6155] done synthesizing module 'Demo_HW_wrapper' (44#1) [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/hdl/Demo_HW_wrapper.v:12]
 WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In2[0]
 WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In3[0]
 WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In4[0]
@@ -192,6 +194,10 @@ WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In2
 WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In29[0]
 WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In30[0]
 WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In31[0]
+WARNING: [Synth 8-3331] design s01_couplers_imp_16EEWZQ has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design s01_couplers_imp_16EEWZQ has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design s01_couplers_imp_16EEWZQ has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design s01_couplers_imp_16EEWZQ has unconnected port S_ARESETN
 WARNING: [Synth 8-3331] design s00_couplers_imp_8QA1FP has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design s00_couplers_imp_8QA1FP has unconnected port M_ARESETN
 WARNING: [Synth 8-3331] design s00_couplers_imp_8QA1FP has unconnected port S_ACLK
@@ -258,8 +264,9 @@ WARNING: [Synth 8-3331] design Demo_HW_microblaze_0_axi_periph_0 has unconnected
 WARNING: [Synth 8-3331] design Demo_HW_microblaze_0_axi_periph_0 has unconnected port M09_ARESETN
 WARNING: [Synth 8-3331] design Demo_HW_microblaze_0_axi_periph_0 has unconnected port S00_ACLK
 WARNING: [Synth 8-3331] design Demo_HW_microblaze_0_axi_periph_0 has unconnected port S00_ARESETN
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 641.367 ; gain = 155.660
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 641.836 ; gain = 157.430
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -272,10 +279,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 641.367 ; gain = 155.660
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 641.836 ; gain = 157.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 641.367 ; gain = 155.660
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 641.836 ; gain = 157.430
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -292,8 +299,8 @@ Parsing XDC File [c:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/
 Finished Parsing XDC File [c:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/ip/Demo_HW_ilmb_v10_0/Demo_HW_ilmb_v10_0/Demo_HW_ilmb_v10_0_in_context.xdc] for cell 'Demo_HW_i/microblaze_0_local_memory/ilmb_v10'
 Parsing XDC File [c:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/ip/Demo_HW_dlmb_bram_if_cntlr_0/Demo_HW_dlmb_bram_if_cntlr_0/Demo_HW_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'Demo_HW_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
 Finished Parsing XDC File [c:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/ip/Demo_HW_dlmb_bram_if_cntlr_0/Demo_HW_dlmb_bram_if_cntlr_0/Demo_HW_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'Demo_HW_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
-Parsing XDC File [c:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/ip/Demo_HW_ilmb_bram_if_cntlr_0/Demo_HW_ilmb_bram_if_cntlr_0/Demo_HW_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'Demo_HW_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
-Finished Parsing XDC File [c:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/ip/Demo_HW_ilmb_bram_if_cntlr_0/Demo_HW_ilmb_bram_if_cntlr_0/Demo_HW_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'Demo_HW_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Parsing XDC File [c:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/ip/Demo_HW_ilmb_bram_if_cntlr_0/Demo_HW_ilmb_bram_if_cntlr_0/Demo_HW_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'Demo_HW_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Finished Parsing XDC File [c:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/ip/Demo_HW_ilmb_bram_if_cntlr_0/Demo_HW_ilmb_bram_if_cntlr_0/Demo_HW_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'Demo_HW_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
 Parsing XDC File [c:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/ip/Demo_HW_lmb_bram_0/Demo_HW_lmb_bram_0/Demo_HW_lmb_bram_0_in_context.xdc] for cell 'Demo_HW_i/microblaze_0_local_memory/lmb_bram'
 Finished Parsing XDC File [c:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/ip/Demo_HW_lmb_bram_0/Demo_HW_lmb_bram_0/Demo_HW_lmb_bram_0_in_context.xdc] for cell 'Demo_HW_i/microblaze_0_local_memory/lmb_bram'
 Parsing XDC File [c:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/ip/Demo_HW_xbar_0/Demo_HW_xbar_0/Demo_HW_xbar_0_in_context.xdc] for cell 'Demo_HW_i/microblaze_0_axi_periph/xbar'
@@ -340,26 +347,26 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/Demo_HW_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/dont_touch.xdc]
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 955.008 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 950.109 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 955.008 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 950.109 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 1 instances
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 955.008 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 955.008 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 950.109 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 950.109 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'Demo_HW_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:29 . Memory (MB): peak = 955.008 ; gain = 469.301
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:36 . Memory (MB): peak = 950.109 ; gain = 465.703
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:29 . Memory (MB): peak = 955.008 ; gain = 469.301
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:36 . Memory (MB): peak = 950.109 ; gain = 465.703
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -487,10 +494,10 @@ Applied set_property DONT_TOUCH = true for Demo_HW_i/axi_gpio_BTNR. (constraint 
 Applied set_property DONT_TOUCH = true for Demo_HW_i/axi_gpio_BTNC. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for Demo_HW_i/ila_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:29 . Memory (MB): peak = 955.008 ; gain = 469.301
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:36 . Memory (MB): peak = 950.109 ; gain = 465.703
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:30 . Memory (MB): peak = 955.008 ; gain = 469.301
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:36 . Memory (MB): peak = 950.109 ; gain = 465.703
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -525,13 +532,8 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-3331] design Demo_HW_microblaze_0_axi_periph_0 has unconnected port M00_ACLK
-WARNING: [Synth 8-3331] design Demo_HW_microblaze_0_axi_periph_0 has unconnected port M00_ARESETN
-WARNING: [Synth 8-3331] design Demo_HW_microblaze_0_axi_periph_0 has unconnected port M01_ACLK
-WARNING: [Synth 8-3331] design Demo_HW_microblaze_0_axi_periph_0 has unconnected port M01_ARESETN
-INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:30 . Memory (MB): peak = 955.008 ; gain = 469.301
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:37 . Memory (MB): peak = 950.109 ; gain = 465.703
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -559,13 +561,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'Demo_HW_i/axi_ethernetlit
 INFO: [Synth 8-5578] Moved timing constraint from pin 'Demo_HW_i/axi_ethernetlite_0/phy_tx_clk' to pin 'Demo_HW_i/mii_to_rmii_0/bbstub_rmii2mac_tx_clk/O'
 INFO: [Synth 8-5819] Moved 15 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:37 . Memory (MB): peak = 967.391 ; gain = 481.684
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:44 . Memory (MB): peak = 964.312 ; gain = 479.906
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:37 . Memory (MB): peak = 967.836 ; gain = 482.129
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:45 . Memory (MB): peak = 964.836 ; gain = 480.430
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -577,7 +579,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:37 . Memory (MB): peak = 978.395 ; gain = 492.688
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:45 . Memory (MB): peak = 976.250 ; gain = 491.844
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -601,7 +603,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:38 . Memory (MB): peak = 978.395 ; gain = 492.688
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:46 . Memory (MB): peak = 976.250 ; gain = 491.844
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -614,7 +616,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:38 . Memory (MB): peak = 978.395 ; gain = 492.688
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:46 . Memory (MB): peak = 976.250 ; gain = 491.844
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -626,25 +628,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:38 . Memory (MB): peak = 978.395 ; gain = 492.688
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:46 . Memory (MB): peak = 976.250 ; gain = 491.844
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:38 . Memory (MB): peak = 978.395 ; gain = 492.688
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:46 . Memory (MB): peak = 976.250 ; gain = 491.844
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:38 . Memory (MB): peak = 978.395 ; gain = 492.688
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:46 . Memory (MB): peak = 976.250 ; gain = 491.844
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:38 . Memory (MB): peak = 978.395 ; gain = 492.688
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:46 . Memory (MB): peak = 976.250 ; gain = 491.844
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -719,35 +721,35 @@ Report Instance Areas:
 +------+------------------------------+-------------------------------------+------+
 |      |Instance                      |Module                               |Cells |
 +------+------------------------------+-------------------------------------+------+
-|1     |top                           |                                     |  3124|
-|2     |  Demo_HW_i                   |Demo_HW                              |  3075|
-|3     |    microblaze_0_axi_periph   |Demo_HW_microblaze_0_axi_periph_0    |  1151|
+|1     |top                           |                                     |  3276|
+|2     |  Demo_HW_i                   |Demo_HW                              |  3227|
+|3     |    microblaze_0_axi_periph   |Demo_HW_microblaze_0_axi_periph_0    |  1192|
 |4     |    microblaze_0_xlconcat     |Demo_HW_microblaze_0_xlconcat_0      |     0|
 |5     |    microblaze_0_local_memory |microblaze_0_local_memory_imp_GG9KAH |   496|
 +------+------------------------------+-------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:38 . Memory (MB): peak = 978.395 ; gain = 492.688
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:46 . Memory (MB): peak = 976.250 ; gain = 491.844
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 22 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 978.395 ; gain = 179.047
-Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:38 . Memory (MB): peak = 978.395 ; gain = 492.688
+Synthesis finished with 0 errors, 0 critical warnings and 24 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 976.250 ; gain = 183.570
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:46 . Memory (MB): peak = 976.250 ; gain = 491.844
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 996.086 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 987.836 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-123 Infos, 114 Warnings, 0 Critical Warnings and 0 Errors encountered.
+125 Infos, 114 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 996.086 ; gain = 512.125
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 996.086 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:49 . Memory (MB): peak = 987.871 ; gain = 505.168
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 987.871 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/Demo_HW_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Demo_HW_wrapper_utilization_synth.rpt -pb Demo_HW_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Jan 22 22:04:34 2024...
+INFO: [Common 17-206] Exiting Vivado at Tue Jan 23 14:32:06 2024...

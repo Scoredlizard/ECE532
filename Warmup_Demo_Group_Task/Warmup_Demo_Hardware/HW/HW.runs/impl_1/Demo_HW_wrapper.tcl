@@ -65,13 +65,25 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  reset_param project.defaultXPMLibraries 
-  open_checkpoint C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/impl_1/Demo_HW_wrapper.dcp
+  create_project -in_memory -part xc7a100tcsg324-1
+  set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
+  set_property design_mode GateLvl [current_fileset]
+  set_param project.singleFileAddWarning.threshold 0
   set_property webtalk.parent_dir C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.cache/wt [current_project]
   set_property parent.project_path C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.xpr [current_project]
   set_property ip_output_repo C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
+  add_files -quiet C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.runs/synth_1/Demo_HW_wrapper.dcp
+  set_msg_config -source 4 -id {BD 41-1661} -limit 0
+  set_param project.isImplRun true
+  add_files C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/Demo_HW.bd
+  set_param project.isImplRun false
+  read_xdc C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/constrs_1/new/eth_ref_clk.xdc
+  set_param project.isImplRun true
+  link_design -top Demo_HW_wrapper -part xc7a100tcsg324-1
+  set_param project.isImplRun false
+  write_hwdef -force -file Demo_HW_wrapper.hwdef
   close_msg_db -file init_design.pb
 } RESULT]
 if {$rc} {
@@ -151,9 +163,6 @@ set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  add_files c:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/ip/Demo_HW_microblaze_0_0/data/mb_bootloop_le.elf
-  set_property SCOPED_TO_REF Demo_HW [get_files -all c:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/ip/Demo_HW_microblaze_0_0/data/mb_bootloop_le.elf]
-  set_property SCOPED_TO_CELLS microblaze_0 [get_files -all c:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/ip/Demo_HW_microblaze_0_0/data/mb_bootloop_le.elf]
   catch { write_mem_info -force Demo_HW_wrapper.mmi }
   catch { write_bmm -force Demo_HW_wrapper_bd.bmm }
   write_bitstream -force Demo_HW_wrapper.bit 

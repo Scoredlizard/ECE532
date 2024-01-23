@@ -1,11 +1,11 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Mon Jan 22 20:49:55 2024
+// Date        : Mon Jan 22 20:48:32 2024
 // Host        : Callum-Laptop running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub -rename_top Demo_HW_ilmb_bram_if_cntlr_0 -prefix
-//               Demo_HW_ilmb_bram_if_cntlr_0_ Demo_HW_ilmb_bram_if_cntlr_0_stub.v
-// Design      : Demo_HW_ilmb_bram_if_cntlr_0
+//               Demo_HW_ilmb_bram_if_cntlr_0_ Demo_HW_dlmb_bram_if_cntlr_0_stub.v
+// Design      : Demo_HW_dlmb_bram_if_cntlr_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a100tcsg324-1
 // --------------------------------------------------------------------------------

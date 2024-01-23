@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1705980505">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1706038143">
   <File Type="PA-TCL" Name="Demo_HW_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="Demo_HW_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Demo_HW_wrapper_reports.tcl"/>
@@ -61,8 +61,9 @@
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="Demo_HW_xbar_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="Demo_HW_ila_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Demo_HW_axi_gpio_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Demo_HW_microblaze_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Demo_HW_ila_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Demo_HW_axi_gpio_3_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Demo_HW_axi_gpio_4_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Demo_HW_axi_gpio_1_0"/>

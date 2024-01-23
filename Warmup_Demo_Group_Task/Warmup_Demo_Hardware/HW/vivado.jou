@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Jan 22 21:56:05 2024
+# Process ID: 13584
+# Current directory: C:/Users/sebas/Desktop/Coding/Git Repos/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14780 C:\Users\sebas\Desktop\Coding\Git Repos\ECE532\Warmup_Demo_Group_Task\Warmup_Demo_Hardware\HW\HW.xpr
+# Log file: C:/Users/sebas/Desktop/Coding/Git Repos/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/vivado.log
+# Journal file: C:/Users/sebas/Desktop/Coding/Git Repos/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/sebas/Desktop/Coding/Git Repos/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.xpr}
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/sebas/Desktop/Coding/Git Repos/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Hardware/HW/HW.srcs/sources_1/bd/Demo_HW/Demo_HW.bd}

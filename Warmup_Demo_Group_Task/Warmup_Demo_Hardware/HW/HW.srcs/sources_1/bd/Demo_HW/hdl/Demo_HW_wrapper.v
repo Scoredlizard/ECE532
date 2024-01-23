@@ -1,8 +1,8 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Mon Jan 22 20:43:07 2024
-//Host        : Callum-Laptop running 64-bit major release  (build 9200)
+//Date        : Mon Jan 22 21:55:55 2024
+//Host        : SebYOGA running 64-bit major release  (build 9200)
 //Command     : generate_target Demo_HW_wrapper.bd
 //Design      : Demo_HW_wrapper
 //Purpose     : IP block netlist
@@ -24,6 +24,12 @@ module Demo_HW_wrapper
     DDR2_0_odt,
     DDR2_0_ras_n,
     DDR2_0_we_n,
+    GPIO_BTNC_tri_i,
+    GPIO_BTND_tri_i,
+    GPIO_BTNL_tri_i,
+    GPIO_BTNR_tri_i,
+    GPIO_LED_tri_o,
+    GPIO_SWT_tri_i,
     eth_mdio_mdc_mdc,
     eth_mdio_mdc_mdio_io,
     eth_ref_clk,
@@ -50,6 +56,12 @@ module Demo_HW_wrapper
   output [0:0]DDR2_0_odt;
   output DDR2_0_ras_n;
   output DDR2_0_we_n;
+  input [0:0]GPIO_BTNC_tri_i;
+  input [0:0]GPIO_BTND_tri_i;
+  input [0:0]GPIO_BTNL_tri_i;
+  input [0:0]GPIO_BTNR_tri_i;
+  output [15:0]GPIO_LED_tri_o;
+  input [15:0]GPIO_SWT_tri_i;
   output eth_mdio_mdc_mdc;
   inout eth_mdio_mdc_mdio_io;
   output eth_ref_clk;
@@ -77,6 +89,12 @@ module Demo_HW_wrapper
   wire [0:0]DDR2_0_odt;
   wire DDR2_0_ras_n;
   wire DDR2_0_we_n;
+  wire [0:0]GPIO_BTNC_tri_i;
+  wire [0:0]GPIO_BTND_tri_i;
+  wire [0:0]GPIO_BTNL_tri_i;
+  wire [0:0]GPIO_BTNR_tri_i;
+  wire [15:0]GPIO_LED_tri_o;
+  wire [15:0]GPIO_SWT_tri_i;
   wire eth_mdio_mdc_mdc;
   wire eth_mdio_mdc_mdio_i;
   wire eth_mdio_mdc_mdio_io;
@@ -108,6 +126,12 @@ module Demo_HW_wrapper
         .DDR2_0_odt(DDR2_0_odt),
         .DDR2_0_ras_n(DDR2_0_ras_n),
         .DDR2_0_we_n(DDR2_0_we_n),
+        .GPIO_BTNC_tri_i(GPIO_BTNC_tri_i),
+        .GPIO_BTND_tri_i(GPIO_BTND_tri_i),
+        .GPIO_BTNL_tri_i(GPIO_BTNL_tri_i),
+        .GPIO_BTNR_tri_i(GPIO_BTNR_tri_i),
+        .GPIO_LED_tri_o(GPIO_LED_tri_o),
+        .GPIO_SWT_tri_i(GPIO_SWT_tri_i),
         .eth_mdio_mdc_mdc(eth_mdio_mdc_mdc),
         .eth_mdio_mdc_mdio_i(eth_mdio_mdc_mdio_i),
         .eth_mdio_mdc_mdio_o(eth_mdio_mdc_mdio_o),

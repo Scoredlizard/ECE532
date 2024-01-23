@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="36">
   <CompositeFile CompositeFileTopName="Demo_HW" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1705974242"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1705974242"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1705974242"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1705974242"/>
+    <Generation Name="SYNTHESIS" State="RESET" Timestamp="1705978465"/>
+    <Generation Name="IMPLEMENTATION" State="RESET" Timestamp="1705978465"/>
+    <Generation Name="SIMULATION" State="RESET" Timestamp="1705978465"/>
+    <Generation Name="HW_HANDOFF" State="RESET" Timestamp="1705978465"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\Demo_HW_microblaze_0_0\Demo_HW_microblaze_0_0.xci" Type="IP">
         <Instance HierarchyPath="microblaze_0"/>
@@ -167,48 +167,60 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="synth\Demo_HW.v" Type="Verilog">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+      <File Name="ip\Demo_HW_axi_gpio_0_0\Demo_HW_axi_gpio_0_0.xci" Type="IP">
+        <Instance HierarchyPath="axi_gpio_led"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
-      </File>
-      <File Name="sim\Demo_HW.v" Type="Verilog">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="Demo_HW.bmm" Type="BMM">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="Demo_HW_ooc.xdc" Type="XDC">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+      <File Name="ip\Demo_HW_axi_gpio_1_0\Demo_HW_axi_gpio_1_0.xci" Type="IP">
+        <Instance HierarchyPath="axi_gpio_swt"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="OUT_OF_CONTEXT"/>
+        <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="hw_handoff\Demo_HW.hwh" Type="HwHandoff">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+      <File Name="ip\Demo_HW_axi_gpio_2_0\Demo_HW_axi_gpio_2_0.xci" Type="IP">
+        <Instance HierarchyPath="axi_gpio_BTND"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
-        <UsedIn Val="HW_HANDOFF"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="hw_handoff\Demo_HW_bd.tcl">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+      <File Name="ip\Demo_HW_axi_gpio_3_0\Demo_HW_axi_gpio_3_0.xci" Type="IP">
+        <Instance HierarchyPath="axi_gpio_BTNL"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
-        <UsedIn Val="HW_HANDOFF"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="synth\Demo_HW.hwdef">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+      <File Name="ip\Demo_HW_axi_gpio_4_0\Demo_HW_axi_gpio_4_0.xci" Type="IP">
+        <Instance HierarchyPath="axi_gpio_BTNR"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
-        <UsedIn Val="HW_HANDOFF"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="sim\Demo_HW.protoinst">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+      <File Name="ip\Demo_HW_axi_gpio_5_0\Demo_HW_axi_gpio_5_0.xci" Type="IP">
+        <Instance HierarchyPath="axi_gpio_BTNC"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\Demo_HW_ila_0_0\Demo_HW_ila_0_0.xci" Type="IP">
+        <Instance HierarchyPath="ila_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
     </FileCollection>

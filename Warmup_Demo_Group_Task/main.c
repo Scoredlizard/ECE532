@@ -38,6 +38,8 @@
 #include "xparameters.h"
 #include "netif/xadapter.h"
 #include "xgpio.h"
+#include <xtmrctr.h>
+#include <xbasic_types.h>
 
 #include "platform.h"
 #include "platform_config.h"
@@ -45,6 +47,14 @@
 #include "xil_printf.h"
 #endif
 #include "xil_cache.h"
+
+#define RESET_SUCCESS 1
+#define RESET_FAIL 0
+
+#define DEBOUNCE_DELAY_MILLISECONDS 10
+#define FREQUENCY_HERTZ 100000
+
+XTmrCtr timer;
 
 //LWIP include files
 #include "lwip/ip_addr.h"
@@ -113,6 +123,17 @@ char is_connected;
 
 //GPIO Globals
 XGpio switches, leds, btnc, btnd, btnl, btnr;
+int switchValue, btncValue, btndValue, btnlValue, btnrValue;
+u32_t sendValue = 0;
+u32_t recvValue = 0;
+
+void start_timer() {
+
+	// Configure timer
+	XTmrCtr_Initialize(&timer, XPAR_AXI_TIMER_0_DEVICE_ID);
+	XTmrCtr_SetResetValue(&timer, 0, XPAR_AXI_TIMER_0_CLOCK_FREQ_HZ / 1000);
+	XTmrCtr_Start(&timer, 0);
+}
 
 void gpio_init(){
 	xil_printf("Start of gpio_init()\n");
@@ -136,12 +157,253 @@ void gpio_init(){
 	XGpio_DiscreteWrite(&leds, 1, 0);
 }
 
+unsigned int btnl_reset_valid = 1;
+unsigned int btnl_end_time = 0;
+unsigned int btnl_start_time = 0;
+unsigned int btnl_previous_state = 0;
+unsigned int btnl_current_state = 0;
+
+unsigned int get_btnl_elapsed_time() {
+
+	btnl_end_time = XTmrCtr_GetValue(&timer, 0);
+
+	return (btnl_end_time - btnl_start_time) / FREQUENCY_HERTZ;
+}
+
+void reset_btnl_value() {
+
+	unsigned int btnl_elapsed_time = get_btnl_elapsed_time();
+
+	if ((btnl_current_state == 1) && (btnl_elapsed_time > DEBOUNCE_DELAY_MILLISECONDS)) {
+
+		btnl_current_state = 0;
+
+		btnl_reset_valid = RESET_SUCCESS;
+	}
+	else if ((btnl_current_state == 1) && (btnl_elapsed_time <= DEBOUNCE_DELAY_MILLISECONDS)) {
+
+		if (btnl_elapsed_time < 0) {
+
+			btnl_start_time = XTmrCtr_GetValue(&timer, 0);
+		}
+
+		btnl_reset_valid = RESET_FAIL;
+	}
+}
+
+unsigned int get_btnl_value() {
+
+	if (btnl_reset_valid == RESET_SUCCESS) {
+
+		if ((XGpio_DiscreteRead(&btnl, 1) == 0) && (btnl_previous_state == 0)) {
+
+			btnl_previous_state = 1;
+		}
+		else if ((XGpio_DiscreteRead(&btnl, 1) == 1) && (btnl_previous_state == 1)) {
+
+			btnl_previous_state = 0;
+			btnl_current_state = 1;
+
+			btnl_reset_valid = 0;
+
+			btnl_start_time = XTmrCtr_GetValue(&timer, 0);
+		}
+
+		return btnl_current_state;
+	}
+
+	return 0;
+}
+
+unsigned int btnr_reset_valid = 1;
+unsigned int btnr_end_time = 0;
+unsigned int btnr_start_time = 0;
+unsigned int btnr_previous_state = 0;
+unsigned int btnr_current_state = 0;
+
+unsigned int get_btnr_elapsed_time() {
+
+	btnr_end_time = XTmrCtr_GetValue(&timer, 0);
+
+	return (btnr_end_time - btnr_start_time) / FREQUENCY_HERTZ;
+}
+
+
+void reset_btnr_value() {
+
+	unsigned int btnr_elapsed_time = get_btnr_elapsed_time();
+
+	if ((btnr_current_state == 1) && (btnr_elapsed_time > DEBOUNCE_DELAY_MILLISECONDS)) {
+
+		btnr_current_state = 0;
+
+		btnr_reset_valid = RESET_SUCCESS;
+	}
+	else if ((btnr_current_state == 1) && (btnr_elapsed_time <= DEBOUNCE_DELAY_MILLISECONDS)) {
+
+		if (btnr_elapsed_time < 0) {
+
+			btnr_start_time = XTmrCtr_GetValue(&timer, 0);
+		}
+
+		btnr_reset_valid = RESET_FAIL;
+	}
+}
+
+
+unsigned int get_btnr_value() {
+
+	if (btnr_reset_valid == RESET_SUCCESS) {
+
+		if ((XGpio_DiscreteRead(&btnr, 1) == 0) && (btnr_previous_state == 0)) {
+
+			btnr_previous_state = 1;
+		}
+		else if ((XGpio_DiscreteRead(&btnr, 1) == 1) && (btnr_previous_state == 1)) {
+
+			btnr_previous_state = 0;
+			btnr_current_state = 1;
+
+			btnr_reset_valid = 0;
+
+			btnr_start_time = XTmrCtr_GetValue(&timer, 0);
+		}
+
+		return btnr_current_state;
+	}
+
+	return 0;
+}
+
+unsigned int btnc_reset_valid = 1;
+unsigned int btnc_end_time = 0;
+unsigned int btnc_start_time = 0;
+unsigned int btnc_previous_state = 0;
+unsigned int btnc_current_state = 0;
+
+unsigned int get_btnc_elapsed_time() {
+
+	btnc_end_time = XTmrCtr_GetValue(&timer, 0);
+
+	return (btnc_end_time - btnc_start_time) / FREQUENCY_HERTZ;
+}
+
+
+void reset_btnc_value() {
+
+	unsigned int btnc_elapsed_time = get_btnc_elapsed_time();
+
+	if ((btnc_current_state == 1) && (btnc_elapsed_time > DEBOUNCE_DELAY_MILLISECONDS)) {
+
+		btnc_current_state = 0;
+
+		btnc_reset_valid = RESET_SUCCESS;
+	}
+	else if ((btnc_current_state == 1) && (btnc_elapsed_time <= DEBOUNCE_DELAY_MILLISECONDS)) {
+
+		if (btnc_elapsed_time < 0) {
+
+			btnc_start_time = XTmrCtr_GetValue(&timer, 0);
+		}
+
+		btnc_reset_valid = RESET_FAIL;
+	}
+}
+
+
+unsigned int get_btnc_value() {
+
+	if (btnc_reset_valid == RESET_SUCCESS) {
+
+		if ((XGpio_DiscreteRead(&btnc, 1) == 0) && (btnc_previous_state == 0)) {
+
+			btnc_previous_state = 1;
+		}
+		else if ((XGpio_DiscreteRead(&btnc, 1) == 1) && (btnc_previous_state == 1)) {
+
+			btnc_previous_state = 0;
+			btnc_current_state = 1;
+
+			btnc_reset_valid = 0;
+
+			btnc_start_time = XTmrCtr_GetValue(&timer, 0);
+		}
+
+		return btnc_current_state;
+	}
+
+	return 0;
+}
+
+unsigned int btnd_reset_valid = 1;
+unsigned int btnd_end_time = 0;
+unsigned int btnd_start_time = 0;
+unsigned int btnd_previous_state = 0;
+unsigned int btnd_current_state = 0;
+
+unsigned int get_btnd_elapsed_time() {
+
+	btnd_end_time = XTmrCtr_GetValue(&timer, 0);
+
+	return (btnd_end_time - btnd_start_time) / FREQUENCY_HERTZ;
+}
+
+
+void reset_btnd_value() {
+
+	unsigned int btnd_elapsed_time = get_btnd_elapsed_time();
+
+	if ((btnd_current_state == 1) && (btnd_elapsed_time > DEBOUNCE_DELAY_MILLISECONDS)) {
+
+		btnd_current_state = 0;
+
+		btnd_reset_valid = RESET_SUCCESS;
+	}
+	else if ((btnd_current_state == 1) && (btnd_elapsed_time <= DEBOUNCE_DELAY_MILLISECONDS)) {
+
+		if (btnd_elapsed_time < 0) {
+
+			btnd_start_time = XTmrCtr_GetValue(&timer, 0);
+		}
+
+		btnd_reset_valid = RESET_FAIL;
+	}
+}
+
+
+unsigned int get_btnd_value() {
+
+	if (btnd_reset_valid == RESET_SUCCESS) {
+
+		if ((XGpio_DiscreteRead(&btnd, 1) == 0) && (btnd_previous_state == 0)) {
+
+			btnd_previous_state = 1;
+		}
+		else if ((XGpio_DiscreteRead(&btnd, 1) == 1) && (btnd_previous_state == 1)) {
+
+			btnd_previous_state = 0;
+			btnd_current_state = 1;
+
+			btnd_reset_valid = 0;
+
+			btnd_start_time = XTmrCtr_GetValue(&timer, 0);
+		}
+
+		return btnd_current_state;
+	}
+
+	return 0;
+}
+
+int doPost = 0;
+
 int main()
 {
 	xil_printf("Start of Main()\n");
 	gpio_init();
+	start_timer();
 	xil_printf("GPIO Initialized\n");
-	//Varibales for IP parameters
+	//Variables for IP parameters
 #if LWIP_IPV6==0
 	ip_addr_t ipaddr, netmask, gw;
 #endif
@@ -155,7 +417,7 @@ int main()
 	//Initialize platform
 	init_platform();
 	xil_printf("Platform Initialized\n");
-	//Defualt IP parameter values
+	//Default IP parameter values
 #if LWIP_IPV6==0
 #if LWIP_DHCP==1
     ipaddr.addr = 0;
@@ -238,12 +500,13 @@ int main()
 	etharp_gratuitous(app_netif);
 
 	//Setup connection
-	setup_client_conn();
+	//setup_client_conn();
 
 	//Event loop
-	int switchValue, btncValue, btndValue, btnlValue, btnrValue;
 	xil_printf("Entering Event Loop\n");
 	while (1) {
+
+
 		//Call tcp_tmr functions
 		//Must be called regularly
 		if (TcpFastTmrFlag) {
@@ -255,7 +518,7 @@ int main()
 			TcpSlowTmrFlag = 0;
 		}
 
-		//Process data queued after interupt
+		//Process data queued after interrupt
 		xemacif_input(app_netif);
 
 
@@ -269,16 +532,49 @@ int main()
 		btnlValue = XGpio_DiscreteRead(&btnl, 1);
 		btnrValue = XGpio_DiscreteRead(&btnr, 1);
 
-		xil_printf("DEBUG | switchValue = %d\n", switchValue);
-		xil_printf("DEBUG | btncValue = %d\n", btncValue);
-		xil_printf("DEBUG | btndValue = %d\n", btndValue);
-		xil_printf("DEBUG | btnlValue = %d\n", btnlValue);
-		xil_printf("DEBUG | btnrValue = %d\n", btnrValue);
+		//xil_printf("DEBUG | switchValue = %d\n", switchValue);
+		//xil_printf("DEBUG | btncValue = %d\n", btncValue);
+		//xil_printf("DEBUG | btndValue = %d\n", btndValue);
+		//xil_printf("DEBUG | btnlValue = %d\n", btnlValue);
+		//xil_printf("DEBUG | btnrValue = %d\n", btnrValue);
+
+		//If BTNL Pressed
+		btnlValue = get_btnl_value();
+		if (btnlValue) {
+			xil_printf("BTNL Pressed!\n");
+			sendValue = (sendValue & 0xFFFF) | ((switchValue & 0xFFFF) << 16);
+			xil_printf("recvValue[31:16] = %x\n", recvValue >> 16);
+			XGpio_DiscreteWrite(&leds, 1, recvValue >> 16);
+		}
+		//If BTNR Pressed
+		btnrValue = get_btnr_value();
+		if (btnrValue) {
+			xil_printf("BTNR Pressed!\n");
+			sendValue = (sendValue & 0xFFFF0000) | (switchValue & 0xFFFF);
+			xil_printf("recvValue[15:0] = %x\n", recvValue & 0xFFFF);
+			XGpio_DiscreteWrite(&leds, 1, recvValue & 0xFFFF);
+		}
+		//If BTNC Pressed
+		btncValue = get_btnc_value();
+		if (btncValue) {
+			xil_printf("BTNC Pressed!\n");
+			doPost = 1;
+			//Setup connection
+			setup_client_conn();
+		}
+		//If BTND Pressed
+		btndValue = get_btnd_value();
+		if (btndValue) {
+			xil_printf("BTND Pressed!\n");
+			//Setup connection
+			setup_client_conn();
+		}
+		reset_btnl_value();
+		reset_btnr_value();
+		reset_btnc_value();
+		reset_btnd_value();
 		//END OF ADDED CODE
-
-
 	}
-
 	//Never reached
 	cleanup_platform();
 
@@ -412,34 +708,61 @@ static err_t tcp_client_connected(void *arg, struct tcp_pcb *tpcb, err_t err)
 
 	//Just send a single packet
 	u8_t apiflags = TCP_WRITE_FLAG_COPY | TCP_WRITE_FLAG_MORE;
-	char send_buf[TCP_SEND_BUFSIZE];
-	u32_t i;
+	xil_printf("BTNC Value: %d\n", btncValue);
+	if (doPost) {
+		doPost = 0;
+		xil_printf("BTNC -> Sending POST...\n");
+		char send_buf[8];
+		send_buf[0] = 'P';
+		send_buf[1] = 'O';
+		send_buf[2] = 'S';
+		send_buf[3] = 'T';
+		send_buf[4] = (char) ((sendValue & 0xFF000000) >> 24);
+		send_buf[5] = (char) ((sendValue & 0x00FF0000) >> 16);
+		send_buf[6] = (char) ((sendValue & 0x0000FF00) >> 8);
+		send_buf[7] = (char) (sendValue & 0x000000FF);
+		while (tcp_sndbuf(c_pcb) < 8);
+		//Enqueue some data to send
+		err = tcp_write(c_pcb, send_buf, 8, apiflags);
+		if (err != ERR_OK) {
+			xil_printf("TCP client: Error on tcp_write: %d\n", err);
+			return err;
+		}
 
-	for(i = 0; i < TCP_SEND_BUFSIZE-1; i = i + 1)
-	{
-		send_buf[i] = i+'a';
+		//send the data packet
+		err = tcp_output(c_pcb);
+		if (err != ERR_OK) {
+			xil_printf("TCP client: Error on tcp_output: %d\n",err);
+			return err;
+		}
+
+		xil_printf("Packet data sent\n");
 	}
-	send_buf[TCP_SEND_BUFSIZE-1] = '\n';
+	//=============================================================
+	else {
+		xil_printf("BTND -> Sending GET...\n");
+		char send_buf2[3];
+		send_buf2[0] = 'G';
+		send_buf2[1] = 'E';
+		send_buf2[2] = 'T';
 
-	//Loop until enough room in buffer (should be right away)
-	while (tcp_sndbuf(c_pcb) < TCP_SEND_BUFSIZE);
+		while (tcp_sndbuf(c_pcb) < 3);
+		//Enqueue some data to send
+		err = tcp_write(c_pcb, send_buf2, 3, apiflags);
+		if (err != ERR_OK) {
+			xil_printf("TCP client: Error on tcp_write: %d\n", err);
+			return err;
+		}
 
-	//Enqueue some data to send
-	err = tcp_write(c_pcb, send_buf, TCP_SEND_BUFSIZE, apiflags);
-	if (err != ERR_OK) {
-		xil_printf("TCP client: Error on tcp_write: %d\n", err);
-		return err;
+		//send the data packet
+		err = tcp_output(c_pcb);
+		if (err != ERR_OK) {
+			xil_printf("TCP client: Error on tcp_output: %d\n",err);
+			return err;
+		}
+
+		xil_printf("Packet data sent\n");
 	}
-
-	//send the data packet
-	err = tcp_output(c_pcb);
-	if (err != ERR_OK) {
-		xil_printf("TCP client: Error on tcp_output: %d\n",err);
-		return err;
-	}
-
-	xil_printf("Packet data sent\n");
-
 	//END OF ADDED CODE
 
 
@@ -468,8 +791,14 @@ static err_t tcp_client_recv(void *arg, struct tcp_pcb *tpcb, struct pbuf *p, er
 	pbuf_copy_partial(p, packet_data, p->tot_len, 0); //Note - inefficient way to access packet data
 	u32_t i;
 
-	for(i = 0; i < p->tot_len; i = i + 1)
+	recvValue = 0;
+	for(i = 0; i < p->tot_len; i = i + 1) {
 		putchar(packet_data[i]);
+		xil_printf("i = %d | packet_data[i] = %x\n", i, packet_data[i] & 0xFF);
+		recvValue += (packet_data[i] & 0xFF) << ((3-i)*8);
+	}
+	xil_printf("Received: %x\n", recvValue);
+
 
 	//END OF ADDED CODE
 

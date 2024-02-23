@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# 
+# Start of session at: Tue Jan 23 23:41:11 2024
+# Process ID: 8096
+# Current directory: C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Software/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Software/webtalk/webtalk.log
+# Journal file: C:/Users/Callum/Repository_Code/ECE532/Warmup_Demo_Group_Task/Warmup_Demo_Software/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

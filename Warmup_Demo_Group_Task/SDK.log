@@ -1,0 +1,5 @@
+22:51:39 INFO  : Registering command handlers for SDK TCF services
+22:51:40 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\Callum\Repository_Code\ECE532\Warmup_Demo_Group_Task\temp_xsdb_launch_script.tcl
+22:51:42 INFO  : XSCT server has started successfully.
+22:51:42 INFO  : Successfully done setting XSCT server connection channel  
+22:51:42 INFO  : Successfully done setting SDK workspace  
